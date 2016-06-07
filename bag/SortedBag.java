@@ -13,7 +13,7 @@ public class SortedBag<E extends Comparable> extends Bag<E> {
 	}
 	
 	//@Override
-	public void insert2(E item){
+	public void insert(E item){
 		
 		if(N == capacity){
 			resize();
