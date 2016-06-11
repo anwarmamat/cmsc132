@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+import java.util.Comparator;
 
 public class Date  implements Comparable<Date>{
 	private static final int[]
@@ -36,7 +36,23 @@ public class Date  implements Comparable<Date>{
 		date[2] = new Date(2011,1,25);
 		
 		Arrays.sort(date);	//use default compareTo
-		//Arrays.sort(date, new MonthComparator());	//compares by month
+		
+		/*
+			You can use a comparator if you want you sort by month
+
+			Arrays.sort(date, new MonthComparator());	//compares by month
+		*/
+
+		
+		/*
+		In java 8, you can use the static method Comparator.comparing.
+		
+		Comparator<Date> c = Comparator.comparing(Date::getMonth);
+		Arrays.sort(date, c);
+		
+		*/
+		
+		
 		for(Date d:date){
 			System.out.println(d);
 		}
