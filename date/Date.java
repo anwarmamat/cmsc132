@@ -29,6 +29,20 @@ public class Date  implements Comparable<Date>{
 	public String toString(){
 		return month +"/" + day +"/" + year;
 	}
+	
+	@Override
+	public int compareTo(Date other) {
+		if(year < other.year) return -1;
+		if(year > other.year) return 1;
+		if(month < other.month) return -1;
+		if(month > other.month) return 1;
+		if(day < other.day) return -1;
+		if(day > other.day) return 1;
+		
+		return 0;
+	}
+	
+	
 	public static void main(String[] args){
 		Date[] date = new Date[3];
 		date[0] = new Date(2014,5,21);
@@ -58,15 +72,5 @@ public class Date  implements Comparable<Date>{
 		}
 		
 	}
-	@Override
-	public int compareTo(Date other) {
-		if(year < other.year) return -1;
-		if(year > other.year) return 1;
-		if(month < other.month) return -1;
-		if(month > other.month) return 1;
-		if(day < other.day) return -1;
-		if(day > other.day) return 1;
-		
-		return 0;
-	}
+	
 }
