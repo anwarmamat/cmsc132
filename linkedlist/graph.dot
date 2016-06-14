@@ -1,0 +1,13 @@
+Digraph G {
+	 rankdir=LR;
+	node [shape=record];
+0 [label="{<data>500|<ref>}" ];
+1 [label="{<data>400|<ref>}" ];
+2 [label="{<data>300|<ref>}" ];
+3 [label="{<data>200|<ref>}" ];
+4 [label="{<data>100|<ref>}" ];
+0:ref->1:data [arrowhead=vee, arrowtail=dot, dir=both]
+1:ref->2:data [arrowhead=vee, arrowtail=dot, dir=both]
+2:ref->3:data [arrowhead=vee, arrowtail=dot, dir=both]
+3:ref->4:data [arrowhead=vee, arrowtail=dot, dir=both]
+}
