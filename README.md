@@ -18,3 +18,16 @@ Lecture 6: Linked List
 Lecture 7: More Linked List 
 
 Lecture 8: Doubly linked List
+
+Lecture 9: Queue
+Lecture 9: Stack
+
+Lecture 10 Recursion
+
+Lecture 12: Binary Tree 	
+
+Lecture 13: Binary Search Tree 
+
+Lecture14: Balanced BST 	
+
+Lecture 15: Polymorphic Lists and Trees 	
