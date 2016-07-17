@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "1000:"
+java PickLongWord 1000 n < wordlist.txt 
+echo "2000:"
+java PickLongWord 2000 n < wordlist.txt 
+echo "5000:"
+java PickLongWord 5000 n < wordlist.txt 
+echo "10000:"
+java PickLongWord 10000 n < wordlist.txt 
+echo "15000:"
+java PickLongWord 15000 n < wordlist.txt 
+echo "30000:"
+java PickLongWord 30000 n < wordlist.txt 
+echo "Done."

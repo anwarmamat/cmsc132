@@ -1,0 +1,22 @@
+Digraph G {
+graph [ordering="out"];
+node [style=filled];
+color=blue;
+ rankdir="TB";
+subgraph cluster0 {
+rank="same";
+1[label="bob"];2[label="alice"];1->2
+null3[style=invis];
+1->null3[style=invis]
+;null4[style=invis];
+2->null4[style=invis];
+null5[style=invis];
+2->null5[style=invis]
+;}
+subgraph cluster0 {
+rank="same";
+node [shape=record];
+struct1 [shape=record,label="--|bob|alice"]
+}
+struct1->1[style=invis];
+}
