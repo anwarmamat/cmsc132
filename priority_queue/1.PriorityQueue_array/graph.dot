@@ -1,0 +1,37 @@
+Digraph G {
+graph [ordering="out"];
+node [style=filled];
+color=blue;
+ rankdir="TB";
+subgraph cluster0 {
+rank="same";
+1[label="virginia"];2[label="newyork"];1->2
+1[label="virginia"];3[label="utah"];1->3
+2[label="newyork"];4[label="california"];2->4
+2[label="newyork"];5[label="maryland"];2->5
+3[label="utah"];6[label="arizona"];3->6
+3[label="utah"];7[label="texas"];3->7
+null8[style=invis];
+4->null8[style=invis];
+null9[style=invis];
+4->null9[style=invis]
+;null10[style=invis];
+5->null10[style=invis];
+null11[style=invis];
+5->null11[style=invis]
+;null12[style=invis];
+6->null12[style=invis];
+null13[style=invis];
+6->null13[style=invis]
+;null14[style=invis];
+7->null14[style=invis];
+null15[style=invis];
+7->null15[style=invis]
+;}
+subgraph cluster0 {
+rank="same";
+node [shape=record];
+struct1 [shape=record,label="--|virginia|newyork|utah|california|maryland|arizona|texas"]
+}
+struct1->1[style=invis];
+}
