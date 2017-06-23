@@ -70,6 +70,23 @@ public class LinkedBag<E extends Comparable<E>> implements Iterable<E>
             N++;
         }
 
+		/**
+		*	Recursive insert
+		*
+		*/
+		
+		public Node insert(Node r, E item){
+		  if(r == null) return new Node(item);
+		  if(r.data.compareTo(item)<0){ 
+		     r.next = insert(r.next, item);
+		     return r;
+		  }else{
+		     Node t = new Node(item);
+		     t.next = r;
+		     return t;
+		  }
+	}
+
 	/**
         * Returns an item by index
         * @param index is the item index
@@ -162,6 +179,17 @@ public class LinkedBag<E extends Comparable<E>> implements Iterable<E>
             return false;
             
 	}
+	 /**
+        *   recursive contains
+        */
+	public boolean contains_rec(Node r, E item)
+	{
+            if(r==null) return false;
+            return (r.data.equals(item))|| contains_rec(r.next, item);
+         
+	}
+
+	
 	
 	/**
         *  prints the linked list
