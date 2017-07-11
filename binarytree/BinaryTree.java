@@ -290,17 +290,34 @@ public class BinaryTree<E> {
         pathStack.pop();
     }
     
+    /** recursive path */
+    public void path_rec(Integer k){
+		path_rec(root,k);
+	}
+	private boolean path_rec(Node r, Integer k){
+		if(r==null) return false;
+		if(path_rec(r.right,k) || path_rec(r.left,k)
+				||r.data.equals(k)){
+			System.out.print(r.data+"->");
+			return true;
+		}else{
+			return false;
+		}
+	}
+    
+    
+    
     /*
      * mirror the binary tree
      */
-    public void mirror(){
-        mirror(root);
+    public void make_mirror(){
+        make_mirror(root);
     }
     
     /*
      * mirror a subbinary tree at a given root
      */
-    private void mirror(Node r){
+    private void make_mirror(Node r){
         if(r == null) return;
         Node t = r.left;
         r.left = r.right;
@@ -309,6 +326,25 @@ public class BinaryTree<E> {
         mirror(r.right);
     }
     
+    
+    
+	
+	public boolean equal(Node t1, Node t2){
+			if(t1==null && t2==null) return true;
+			if(t1 ==null && t2 != null) return false;
+			if(t2 ==null && t1 != null) return false;
+			return t1.data.equals(t2.data) && 
+			equal(t1.left, t2.left) && equal(t1.right, t2.right);
+	}
+	
+	public boolean is_mirror(Node t1, Node t2){
+		if(t1==null && t2==null) return true;
+		if(t1 ==null && t2 != null) return false;
+		if(t2 ==null && t1 != null) return false;
+		return t1.data.equals(t2.data) && 
+		mirror(t1.left, t2.right) && mirror(t1.right, t2.left);
+}
+
     
     public E findLCA(E n1, E n2)
     {
