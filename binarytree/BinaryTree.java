@@ -305,8 +305,29 @@ public class BinaryTree<E> {
 		}
 	}
     
+    /**
+     *  Merge two trees into one tree by adding corresponding keys
+     *
+     *
+     */
+    /*
+    public void merge(){
+		root3 = merge(root1,root2);
+	}
+	
+	private Node merge(Node t1,Node t2){
+		if(t1==null && t2==null) return null;
+		if(t1==null) return t2;
+		if(t2==null) return t1;
+		
+		int d = t1.key + t2.key;
+		Node t = new Node(d);
+		t.left = merge(t1.left, t2.left);
+		t.right = merge(t1.right, t2.right);
+		return t;
+	}
     
-    
+    */
     /*
      * mirror the binary tree
      */
