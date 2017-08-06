@@ -161,22 +161,22 @@ public class BinaryTree<E> {
         }
     }
     private void inOrderTraverseIterate(Node r){
-    Stack<Node> S = new Stack();
-    Node current = root;
-    while(current != null  || !S.empty()){
-        if(current != null){
-           S.push(current);
-           current = current.left;
-        }else{
-            current = S.pop();
-            System.out.print(current.key+ "->");
-            current = current.right;
-        }
+    	Stack<Node> S = new Stack();
+    	Node current = root;
+    	while(current != null  || !S.empty()){
+        	if(current != null){
+           		S.push(current);
+           		current = current.left;
+        	}else{
+            	current = S.pop();
+            	System.out.print(current.key+ "->");
+            	current = current.right;
+        	}
+    	}
     }
-}
 
 
-public void postOrderTraversalIterative(){
+    public void postOrderTraversalIterative(){
 		postOrderIterative(root3);
 	}
 	private void postOrderTraversalIterative(Node node) 
