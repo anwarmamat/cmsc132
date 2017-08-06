@@ -174,6 +174,56 @@ public class BinaryTree<E> {
         }
     }
 }
+
+
+public void postOrderTraversalIterative(){
+		postOrderIterative(root3);
+	}
+	private void postOrderTraversalIterative(Node node) 
+    {
+        Stack<Node> S = new Stack<Node>();
+          
+        // Check for empty tree
+        if (node == null)
+            return;
+        S.push(node);
+        Node prev = null;
+        while (!S.isEmpty()) 
+        {
+            Node current = S.peek();
+            /* go down the tree in search of a leaf an if so process it 
+            and pop stack otherwise move down */
+            if (prev == null || prev.left == current || prev.right == current) {
+                if (current.left != null)
+                    S.push(current.left);
+                else if (current.right != null)
+                    S.push(current.right);
+                else{
+                    S.pop();
+                    System.out.print(current.key+",");
+                }
+  
+                /* go up the tree from left node, if the child is right 
+                   push it onto stack otherwise process parent and pop 
+                   stack */
+            } else if (current.left == prev) {
+                if (current.right != null)
+                    S.push(current.right);
+                else{
+                    S.pop();
+                    System.out.print(current.key+",");
+                }
+                  
+                /* go up the tree from right node and after coming back
+                 from right node process parent and pop stack */
+            } else if (current.right == prev){
+                S.pop();
+                System.out.print(current.key+",");
+            }
+            prev = current;
+        }       
+    }
+
     
     /**
     * is the symbol table empty?
