@@ -367,9 +367,18 @@ public class BinaryTree<E> {
 	
 	private Node merge(Node t1,Node t2){
 		if(t1==null && t2==null) return null;
-		if(t1==null) return t2;
-		if(t2==null) return t1;
-		
+		if(t1==null) {
+			Node t = new Node(t2.key);
+			t.left = merge(null, t2.left);
+			t.right = merge(null, t2.right);
+			return t;
+			}
+		if(t2==null){
+			Node t = new Node(t1.key);
+			t.left = merge(t1.left, null);
+			t.right = merge(t1.right, null);
+			return t;
+		}
 		int d = t1.key + t2.key;
 		Node t = new Node(d);
 		t.left = merge(t1.left, t2.left);
