@@ -1,33 +1,28 @@
 # cmsc132
-Object-Oriented Programming II
+## Object-Oriented Programming II Classroom examples 
 
-Classroom examples 
-
-Lecture 1: Fraction
-
-Lecture 2: Person, Student, Question
-
-Lecture 3: Shape, Interface
-
-Lecture 4: Array Bag
-
-Lecture 5: Sorted Bag
-
-Lecture 6: Linked List
-
-Lecture 7: More Linked List 
-
-Lecture 8: Doubly linked List
-
-Lecture 9: Queue
-Lecture 9: Stack
-
-Lecture 10 Recursion
-
-Lecture 12: Binary Tree 	
-
-Lecture 13: Binary Search Tree 
-
-Lecture14: Balanced BST 	
-
-Lecture 15: Polymorphic Lists and Trees 	
+- Fraction
+- Person, Student, Question
+- Shape, Interface
+- Array Bag
+- Sorted Bag
+- Linked List
+- More Linked List 
+- Doubly linked List
+- Queue
+- Stack
+- Recursion
+- Binary Tree 	
+- Binary Search Tree 
+- Balanced BST 	
+- Polymorphic Lists and Trees 	
+- Red & Black Tree
+- Binary Heap and Priority Queue
+- 2-3-4 Trees
+- Java Threads
+- Hash Tables
+- Undirected Graphs
+- Directed Graphs
+- Shortest Path
+- MST
+- Sorting
