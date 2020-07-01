@@ -177,9 +177,9 @@ public class BinaryTree<E> {
 
 
     public void postOrderTraversalIterative(){
-		postOrderIterative(root3);
-	}
-	private void postOrderTraversalIterative(Node node) 
+	postOrderIterative(root3);
+    }
+    private void postOrderTraversalIterative(Node node) 
     {
         Stack<Node> S = new Stack<Node>();
           
