@@ -1,7 +1,7 @@
 /**
  *
  * A binary tree implementation
- * * @auther Anwar Mamat
+ * * 
  *           2
  *       /       \
  *    7            5
