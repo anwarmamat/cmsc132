@@ -35,7 +35,7 @@ public class Bag<E> implements Iterable<E>,Cloneable{
 	}
 	//O(1)
 	public E get(int index){
-		if(index >= N) throw new NoSuchElementException();
+		if(index < 0 || index >= N) throw new NoSuchElementException();
 		return items[index];
 	}
 	//O(n) ==> O(logn)
@@ -49,12 +49,12 @@ public class Bag<E> implements Iterable<E>,Cloneable{
 	
 	@Override
 	public String toString(){
-		String str="";
-		for(int i=0; i < N; i++){
-			str += items[i];
-			str += ",";
+		StringBuilder s = new StringBuilder(); //mutable string, can append
+		for(int i = 0; i < N; i++) {
+			s.append(items[i]);
+			s.append(",");
 		}
-		return str;
+		return s.toString();
 	}
 	@Override
 	public Iterator<E> iterator() {
